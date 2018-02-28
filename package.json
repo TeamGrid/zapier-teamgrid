@@ -1,0 +1,47 @@
+{
+  "name": "zapier-teamgrid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "build": "rm -rf lib && babel src --out-dir lib",
+    "dev": "rm -rf lib && babel src --out-dir lib --watch",
+    "push": "npm run build && zapier push",
+    "pretest": "npm run lint",
+    "watch:test": "mocha --require babel-register --watch src/test/index.js",
+    "test": "npm run build && zapier validate && mocha --recursive lib/test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamGrid/zapier-teamgrid.git"
+  },
+  "author": "Max Nowack <max@teamgridapp.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TeamGrid/zapier-teamgrid/issues"
+  },
+  "homepage": "https://github.com/TeamGrid/zapier-teamgrid#readme",
+  "engines": {
+    "node": "6.10.3",
+    "npm": ">=3.10.10"
+  },
+  "dependencies": {
+    "zapier-platform-core": "5.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "5.0.1",
+    "nock": "^9.2.1",
+    "should": "13.2.1",
+    "zapier-platform-cli": "^5.0.0"
+  }
+}
