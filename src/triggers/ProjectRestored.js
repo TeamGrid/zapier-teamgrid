@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Project Restored',
-    description: '',
+    description: 'Triggered when a project was restored.',
   },
 
   operation: {

@@ -40,7 +40,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Call Hangup',
-    description: '',
+    description: 'Triggered after a call hangup (only if telephony integration is enabled).',
   },
 
   operation: {

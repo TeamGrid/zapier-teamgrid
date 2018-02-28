@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Contact Restored',
-    description: '',
+    description: 'Triggered when a contact was restored.',
   },
 
   operation: {

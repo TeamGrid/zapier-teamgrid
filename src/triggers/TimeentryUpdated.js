@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Time Entry Updated',
-    description: '',
+    description: 'Triggered when a time entry was updated.',
   },
 
   operation: {

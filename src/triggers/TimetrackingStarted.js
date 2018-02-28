@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Time Tracking Started',
-    description: '',
+    description: 'Triggered when a user started tracking time.',
   },
 
   operation: {

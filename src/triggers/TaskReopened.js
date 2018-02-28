@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Task Reopened',
-    description: '',
+    description: 'Triggered when a task was reopened.',
   },
 
   operation: {

@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Contact Removed',
-    description: '',
+    description: 'Triggered when a contact was archived.',
   },
 
   operation: {

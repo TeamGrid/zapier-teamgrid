@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Task Removed',
-    description: '',
+    description: 'Triggered when a task was archived.',
   },
 
   operation: {

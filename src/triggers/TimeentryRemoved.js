@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Time Entry Removed',
-    description: '',
+    description: 'Triggered when a time entry was archived.',
   },
 
   operation: {

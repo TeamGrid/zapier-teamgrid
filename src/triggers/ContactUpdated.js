@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Contact Updated',
-    description: '',
+    description: 'Triggered when a contact was updated.',
   },
 
   operation: {

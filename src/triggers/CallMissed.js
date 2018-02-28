@@ -40,7 +40,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Call Missed',
-    description: '',
+    description: 'Triggered when a call was missed (only if telephony integration is enabled).',
   },
 
   operation: {

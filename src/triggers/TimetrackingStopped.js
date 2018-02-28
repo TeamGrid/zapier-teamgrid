@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Time Tracking Stopped',
-    description: '',
+    description: 'Triggered when a user stopped tracking time.',
   },
 
   operation: {

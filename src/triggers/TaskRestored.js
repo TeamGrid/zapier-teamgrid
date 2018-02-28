@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Task Restored',
-    description: '',
+    description: 'Triggered when a task was restored.',
   },
 
   operation: {

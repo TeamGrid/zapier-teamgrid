@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Task Updated',
-    description: '',
+    description: 'Triggered when a task was updated.',
   },
 
   operation: {

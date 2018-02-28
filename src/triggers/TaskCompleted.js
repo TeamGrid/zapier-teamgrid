@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Task Completed',
-    description: '',
+    description: 'Triggered when a task was completed.',
   },
 
   operation: {

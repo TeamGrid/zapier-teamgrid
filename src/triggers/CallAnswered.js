@@ -40,7 +40,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Call Answered',
-    description: '',
+    description: 'Triggered when a call was answered (only if telephony integration is enabled).',
   },
 
   operation: {

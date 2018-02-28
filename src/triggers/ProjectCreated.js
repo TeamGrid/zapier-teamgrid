@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Project Created',
-    description: '',
+    description: 'Triggered when a project was created.',
   },
 
   operation: {

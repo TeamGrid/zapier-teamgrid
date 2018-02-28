@@ -18,7 +18,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Time Entry Created Manually',
-    description: '',
+    description: 'Triggered when a time entry was created manually.',
   },
 
   operation: {

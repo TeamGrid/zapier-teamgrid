@@ -40,7 +40,7 @@ export default {
   noun: 'Call',
   display: {
     label: 'Call Incoming',
-    description: '',
+    description: 'Triggered when a call is incoming (only if telephony integration is enabled).',
   },
 
   operation: {
