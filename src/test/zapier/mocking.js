@@ -1,4 +1,5 @@
 import nock from 'nock';
+import moment from 'moment';
 
 nock('https://api.teamgridapp.com')
   .persist()
@@ -73,6 +74,22 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
+  .put('/contacts/asdf')
+  .reply(200, (uri, body) => {
+    const data = JSON.parse(body);
+    return {
+      statusCode: 200,
+      status: 'Ok',
+      info: 'Contacts',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
   .get('/projects')
   .reply(200, {
     statusCode: 200,
@@ -111,6 +128,22 @@ nock('https://api.teamgridapp.com')
     return {
       statusCode: 201,
       status: 'Created',
+      info: 'Projects',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .put('/projects/asdf')
+  .reply(200, (uri, body) => {
+    const data = JSON.parse(body);
+    return {
+      statusCode: 200,
+      status: 'Ok',
       info: 'Projects',
       data: {
         _id: 'asdf',
@@ -166,6 +199,62 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
+  .put('/tasks/asdf')
+  .reply(200, (uri, body) => {
+    const data = JSON.parse(body);
+    return {
+      statusCode: 200,
+      status: 'Ok',
+      info: 'Tasks',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .post('/tasks/asdf/startTracking')
+  .reply((uri, body) => {
+    const data = JSON.parse(body);
+    if (!data.userId || !data.time) {
+      return [400, {
+        statusCode: 400,
+        status: 'Bad Request',
+        info: 'error',
+        error: 'Bad Request',
+      }];
+    }
+    return [204, {
+      statusCode: 204,
+      status: 'No Content',
+      info: 'Tasks',
+    }];
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .post('/tasks/asdf/stopTracking')
+  .reply((uri, body) => {
+    const data = JSON.parse(body);
+    if (!data.time) {
+      return [400, {
+        statusCode: 400,
+        status: 'Bad Request',
+        info: 'error',
+        error: 'Bad Request',
+      }];
+    }
+    return [204, {
+      statusCode: 204,
+      status: 'No Content',
+      info: 'Tasks',
+    }];
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
   .get('/times/asdf')
   .reply(200, {
     statusCode: 200,
@@ -181,6 +270,7 @@ nock('https://api.teamgridapp.com')
   .post('/times')
   .reply(201, (uri, body) => {
     const data = JSON.parse(body);
+    data.duration = moment(data.end).diff(data.start, 'minutes');
     return {
       statusCode: 201,
       status: 'Created',
@@ -191,6 +281,24 @@ nock('https://api.teamgridapp.com')
       },
     };
   });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .put('/times/asdf')
+  .reply(200, (uri, body) => {
+    const data = JSON.parse(body);
+    data.duration = moment(data.end).diff(new Date('2018-03-01T09:00:00.000Z'), 'minutes');
+    return {
+      statusCode: 200,
+      status: 'Ok',
+      info: 'Times',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
+
 nock('https://api.teamgridapp.com')
   .persist()
   .get('/lists/asdf')
@@ -239,3 +347,18 @@ nock('https://api.teamgridapp.com')
     };
   });
 
+nock('https://api.teamgridapp.com')
+  .persist()
+  .put('/lists/asdf')
+  .reply(200, (uri, body) => {
+    const data = JSON.parse(body);
+    return {
+      statusCode: 200,
+      status: 'Ok',
+      info: 'Lists',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
