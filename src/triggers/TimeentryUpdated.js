@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TimeentryUpdated',
-  noun: 'Call',
+  noun: 'Time Entry',
   display: {
     label: 'Time Entry Updated',
     description: 'Triggered when a time entry was updated.',

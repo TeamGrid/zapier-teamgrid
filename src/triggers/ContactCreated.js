@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ContactCreated',
-  noun: 'Call',
+  noun: 'Contact',
   display: {
     label: 'Contact Created',
     description: 'Triggered when a contact was created.',

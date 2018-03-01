@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TimetrackingStopped',
-  noun: 'Call',
+  noun: 'Timetracking',
   display: {
     label: 'Time Tracking Stopped',
     description: 'Triggered when a user stopped tracking time.',

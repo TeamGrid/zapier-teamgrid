@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TimeentryCreatedManually',
-  noun: 'Call',
+  noun: 'Time Entry',
   display: {
     label: 'Time Entry Created Manually',
     description: 'Triggered when a time entry was created manually.',

@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TaskReopened',
-  noun: 'Call',
+  noun: 'Task',
   display: {
     label: 'Task Reopened',
     description: 'Triggered when a task was reopened.',

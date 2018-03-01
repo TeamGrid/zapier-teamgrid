@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TaskCreated',
-  noun: 'Call',
+  noun: 'Task',
   display: {
     label: 'Task Created',
     description: 'Triggered when a task was created.',

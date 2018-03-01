@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ContactUpdated',
-  noun: 'Call',
+  noun: 'Contact',
   display: {
     label: 'Contact Updated',
     description: 'Triggered when a contact was updated.',

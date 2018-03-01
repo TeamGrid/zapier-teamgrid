@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ProjectCreated',
-  noun: 'Call',
+  noun: 'Project',
   display: {
     label: 'Project Created',
     description: 'Triggered when a project was created.',

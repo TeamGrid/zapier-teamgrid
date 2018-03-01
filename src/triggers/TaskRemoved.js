@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TaskRemoved',
-  noun: 'Call',
+  noun: 'Task',
   display: {
     label: 'Task Removed',
     description: 'Triggered when a task was archived.',

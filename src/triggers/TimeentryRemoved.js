@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'TimeentryRemoved',
-  noun: 'Call',
+  noun: 'Time Entry',
   display: {
     label: 'Time Entry Removed',
     description: 'Triggered when a time entry was archived.',

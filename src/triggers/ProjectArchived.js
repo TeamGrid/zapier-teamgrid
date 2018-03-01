@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ProjectArchived',
-  noun: 'Call',
+  noun: 'Project',
   display: {
     label: 'Project Archived',
     description: 'Triggered when a project was archived.',

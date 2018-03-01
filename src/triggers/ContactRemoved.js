@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ContactRemoved',
-  noun: 'Call',
+  noun: 'Contact',
   display: {
     label: 'Contact Removed',
     description: 'Triggered when a contact was archived.',

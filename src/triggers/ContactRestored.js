@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ContactRestored',
-  noun: 'Call',
+  noun: 'Contact',
   display: {
     label: 'Contact Restored',
     description: 'Triggered when a contact was restored.',

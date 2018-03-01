@@ -15,7 +15,7 @@ const outputFields = [
 
 export default {
   key: 'ProjectRestored',
-  noun: 'Call',
+  noun: 'Project',
   display: {
     label: 'Project Restored',
     description: 'Triggered when a project was restored.',
