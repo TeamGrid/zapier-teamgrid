@@ -47,7 +47,7 @@ export const inputFields = [
     key: 'budgetType',
     label: 'Budget Type',
     type: 'integer',
-    default: '3',
+    default: '100',
     choices: {
       100: 'none',
       0: 'by hours',
