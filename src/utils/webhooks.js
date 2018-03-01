@@ -1,7 +1,12 @@
 import apiCall from './apiCall';
 import convertId from './convertId';
 
-export const parse = (z, bundle) => [convertId(bundle.cleanedRequest.item)];
+export const parse = (z, bundle) => {
+  const result = { ...bundle.cleanedRequest };
+  result.item = convertId(result.item);
+  result.id = result.item.id;
+  return [result];
+};
 
 export const performSubscribe = hookName => (z, bundle) => apiCall(z, bundle, {
   url: '/webhooks',
