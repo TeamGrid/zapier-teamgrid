@@ -6,7 +6,7 @@ export const parse = (z, bundle) => [convertId(bundle.cleanedRequest.item)];
 export const performSubscribe = hookName => (z, bundle) => apiCall(z, bundle, {
   url: '/webhooks',
   method: 'POST',
-  data: {
+  body: {
     url: bundle.targetUrl,
     actions: [hookName],
   },
