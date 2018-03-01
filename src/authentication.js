@@ -11,6 +11,6 @@ export default {
 };
 
 export const addApiKeyToHeader = (request, z, bundle) => {
-  request.headers.Authorization = `Basic ${bundle.authData.apiKey}`;
+  request.headers.Authorization = `Bearer ${bundle.authData.apiKey}`;
   return request;
 };

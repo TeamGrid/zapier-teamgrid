@@ -5,7 +5,7 @@ nock('https://api.teamgridapp.com')
   .persist()
   .get('/teams')
   .reply(function mockAuth() {
-    const key = this.req.headers.authorization[0].split('Basic ')[1];
+    const key = this.req.headers.authorization[0].split('Bearer ')[1];
     if (key === 'abc1234') {
       return [200, {
         statusCode: 200,
