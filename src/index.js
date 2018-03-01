@@ -1,6 +1,7 @@
 import { version as platformVersion } from 'zapier-platform-core';
 import triggers from '/triggers';
 import resources from '/resources';
+import searches from '/searches';
 import authentication, { addApiKeyToHeader } from '/authentication';
 import { version } from '../package.json';
 
@@ -12,6 +13,6 @@ export default {
   afterResponse: [],
   resources,
   triggers,
-  searches: {},
+  searches,
   creates: {},
 };
