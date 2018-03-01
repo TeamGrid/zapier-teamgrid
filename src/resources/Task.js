@@ -98,14 +98,7 @@ export default {
     },
     operation: {
       inputFields,
-      sample: {
-        name: 'Testtask',
-        description: 'Test description',
-        dueDate: new Date('2018-03-01'),
-        plannedTime: 120,
-        order: 1,
-        userId: 'eryS45sSqb2y7KzWA',
-      },
+      sample,
       perform: (z, b) => apiCall(z, b, {
         url: '/tasks',
         method: 'POST',

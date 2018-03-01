@@ -111,13 +111,7 @@ export default {
     },
     operation: {
       inputFields,
-      sample: {
-        start: new Date('2018-02-08T09:00:00.000Z'),
-        end: new Date('2018-02-08T10:00:00.000Z'),
-        taskId: 'FyBMR3CdYpME6NXBM',
-        userId: 'JFZCwR6Jqg8KW7HXu',
-        comment: 'asdf …',
-      },
+      sample,
       perform: (z, b) => apiCall(z, b, {
         url: '/times',
         method: 'POST',

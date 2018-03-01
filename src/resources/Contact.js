@@ -137,15 +137,7 @@ export default {
     },
     operation: {
       inputFields,
-      sample: {
-        type: 'company',
-        companyTitle: 'Test GmbH',
-        customerId: 'MY-CUSTOMER-ID-1234',
-        accountingtType: 2,
-        accountingHourlyRate: 100,
-        budgetType: 0,
-        budgetHours: 1200,
-      },
+      sample,
       perform: (z, b) => apiCall(z, b, {
         url: '/contacts',
         method: 'POST',

@@ -115,20 +115,7 @@ export default {
     },
     operation: {
       inputFields,
-      sample: {
-        name: 'Testproject',
-        individualId: 'P-1001',
-        briefing: 'This is a **test briefing**',
-        dueDate: new Date('2018-03-01'),
-        contactId: '5HRg3uwwtuiMKZznZ',
-        listId: '7HRg3uwwtuiMKZznB',
-        order: 1,
-        managerId: '5HRg3uwwtuiMKZznZ',
-        accountingtType: 2,
-        accountingHourlyRate: 100,
-        budgetType: 0,
-        budgetHours: 1200,
-      },
+      sample,
       perform: (z, b) => apiCall(z, b, {
         url: '/projects',
         method: 'POST',
