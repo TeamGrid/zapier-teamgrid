@@ -1,10 +1,7 @@
 import apiCall from './apiCall';
+import convertId from './convertId';
 
-export const parse = (result) => {
-  const res = { ...result };
-  res.id = res.item._id; // eslint-disable-line no-underscore-dangle
-  return [res];
-};
+export const parse = (z, bundle) => [convertId(bundle.cleanedRequest.item)];
 
 export const performSubscribe = hookName => (z, bundle) => apiCall(z, bundle, {
   url: '/webhooks',
@@ -13,9 +10,9 @@ export const performSubscribe = hookName => (z, bundle) => apiCall(z, bundle, {
     url: bundle.targetUrl,
     actions: [hookName],
   },
-}).then(data => data._id); // eslint-disable-line no-underscore-dangle
+}).then(data => ({ id: data._id })); // eslint-disable-line no-underscore-dangle
 
 export const performUnsubscribe = (z, b) => apiCall(z, b, {
-  url: `/webhooks/${b.subscribeData.Id}`,
+  url: `/webhooks/${b.subscribeData.id}`,
   method: 'DELETE',
 });
