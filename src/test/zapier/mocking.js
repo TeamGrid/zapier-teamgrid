@@ -191,3 +191,51 @@ nock('https://api.teamgridapp.com')
       },
     };
   });
+nock('https://api.teamgridapp.com')
+  .persist()
+  .get('/lists/asdf')
+  .reply(200, {
+    statusCode: 200,
+    status: 'Ok',
+    info: 'Lists',
+    data: {
+      _id: 'asdf',
+    },
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .get('/lists')
+  .reply(200, {
+    statusCode: 200,
+    status: 'Ok',
+    info: 'Lists',
+    data: [{
+      _id: 'asdf',
+      parentId: 'asdf',
+      type: 'tasks',
+      name: 'Testtask',
+    }, {
+      _id: 'fdsa',
+      parentId: 'asdf',
+      type: 'tasks',
+      name: 'asdf',
+    }],
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .post('/lists')
+  .reply(201, (uri, body) => {
+    const data = JSON.parse(body);
+    return {
+      statusCode: 201,
+      status: 'Created',
+      info: 'Lists',
+      data: {
+        _id: 'asdf',
+        ...data,
+      },
+    };
+  });
+

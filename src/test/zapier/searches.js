@@ -38,5 +38,11 @@ describe('Searches', () => {
       fields: { search: 'asdf' },
       check: results => results.length > 0,
     }],
+  }, {
+    name: 'SearchList',
+    search: [{
+      fields: { parentId: 'asdf', type: 'tasks', name: 'Test List' },
+      check: results => results.length > 0,
+    }],
   }].forEach(buildTest);
 });

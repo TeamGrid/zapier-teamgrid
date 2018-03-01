@@ -102,6 +102,20 @@ describe('Resources', () => {
       check: ({ id, name }) => id === 'asdf' && name === 'Testtask',
     },
   }, {
+    name: 'List',
+    get: {
+      id: 'asdf',
+      check: result => result.id === 'asdf',
+    },
+    search: [{
+      fields: { id: 'asdf' },
+      check: results => results.length > 0,
+    }],
+    create: {
+      fields: { name: 'Test List', type: 'tasks', parentId: 'asdf' },
+      check: ({ id, name }) => id === 'asdf' && name === 'Test List',
+    },
+  }, {
     name: 'Timeentry',
     get: {
       id: 'asdf',
@@ -112,8 +126,12 @@ describe('Resources', () => {
       check: results => results.length > 0,
     }],
     create: {
-      fields: {},
-      check: result => result.id === 'asdf',
+      fields: {
+        taskId: 'asdf',
+        start: new Date('2018-03-01T09:00:00.000Z'),
+        end: new Date('2018-03-01T10:00:00.000Z'),
+      },
+      check: result => result.duration === 60,
     },
   }].forEach(buildTest);
 });

@@ -6,6 +6,7 @@ const convert = (result) => {
 };
 
 export default (results) => {
+  if (!results) return results;
   if (Array.isArray(results)) return results.map(convert);
   return convert(results);
 };
