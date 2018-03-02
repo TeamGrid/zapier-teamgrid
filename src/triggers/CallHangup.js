@@ -48,7 +48,7 @@ export default {
     performSubscribe: performSubscribe('call_hangup'),
     performUnsubscribe,
     perform: parse,
-    performList: () => [],
+    performList: () => [sample],
     sample,
     outputFields,
   },

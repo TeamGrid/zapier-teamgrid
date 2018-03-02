@@ -48,7 +48,7 @@ export default {
     performSubscribe: performSubscribe('call_missed'),
     performUnsubscribe,
     perform: parse,
-    performList: () => [],
+    performList: () => [sample],
     sample,
     outputFields,
   },
