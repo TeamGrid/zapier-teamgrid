@@ -74,7 +74,7 @@ export default {
       ],
       sample,
       outputFields,
-      perform: (z, b) => apiCall(z, b, `/tasks/${b.inputData.id}`),
+      perform: (z, b) => apiCall(z, b, `/tasks/${b.inputData.id}`, { resolvePaging: false }),
     },
   },
   search: {
@@ -88,7 +88,7 @@ export default {
       ],
       sample,
       outputFields,
-      perform: (z, b) => apiCall(z, b, `/tasks/${b.inputData.id}`).then(result => [result]),
+      perform: (z, b) => apiCall(z, b, `/tasks/${b.inputData.id}`, { resolvePaging: false }).then(result => [result]),
     },
   },
   create: {

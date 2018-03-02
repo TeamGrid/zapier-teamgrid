@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "lodash.escaperegexp": "^4.1.2",
+    "qs": "^6.5.1",
     "zapier-platform-core": "5.0.0"
   },
   "devDependencies": {

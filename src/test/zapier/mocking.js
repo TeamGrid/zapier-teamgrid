@@ -26,7 +26,7 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
-  .get('/contacts')
+  .get('/contacts?limit=1000&page=1')
   .reply(200, {
     statusCode: 200,
     status: 'Ok',
@@ -40,6 +40,36 @@ nock('https://api.teamgridapp.com')
       type: 'company',
       companyTitle: 'asdf',
     }],
+    pagination: {
+      total: 4,
+      pages: 41,
+      limit: 1000,
+      page: 1,
+    },
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
+  .get('/contacts?limit=1000&page=2')
+  .reply(200, {
+    statusCode: 200,
+    status: 'Ok',
+    info: 'Contacts',
+    data: [{
+      _id: 'asdf',
+      type: 'company',
+      companyTitle: 'TeamGrid',
+    }, {
+      _id: 'fdsa',
+      type: 'company',
+      companyTitle: 'asdf',
+    }],
+    pagination: {
+      total: 4,
+      pages: 2,
+      limit: 1000,
+      page: 2,
+    },
   });
 
 nock('https://api.teamgridapp.com')
@@ -90,7 +120,7 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
-  .get('/projects')
+  .get('/projects?limit=1000&page=1')
   .reply(200, {
     statusCode: 200,
     status: 'Ok',
@@ -167,7 +197,7 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
-  .get('/tasks')
+  .get('/tasks?limit=1000&page=1')
   .reply(200, {
     statusCode: 200,
     status: 'Ok',
@@ -313,7 +343,7 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
-  .get('/lists')
+  .get('/lists?limit=1000&page=1')
   .reply(200, {
     statusCode: 200,
     status: 'Ok',
