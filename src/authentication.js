@@ -1,3 +1,5 @@
+import apiCall from '/utils/apiCall';
+
 export default {
   type: 'custom',
   test: { url: 'https://api.teamgridapp.com/teams' },
@@ -7,7 +9,7 @@ export default {
     required: true,
     helpText: 'Create one in your team settings.',
   }],
-  connectionLabel: '{{bundle.authData.apiKey}}',
+  connectionLabel: (z, b) => apiCall(z, b, '/teams').then(team => `${team.name} (api key: ${b.authData.apiKey})`),
 };
 
 export const addApiKeyToHeader = (request, z, bundle) => {
