@@ -10,6 +10,7 @@
     "push": "npm run build && zapier push",
     "pretest": "npm run lint && npm run build",
     "watch:test": "mocha --require babel-register --watch src/test/index.js",
+    "validate": "zapier validate",
     "test": "mocha --recursive lib/test/index.js --timeout 15000"
   },
   "repository": {
