@@ -8,7 +8,7 @@
     "build": "rm -rf lib && babel src --out-dir lib",
     "dev": "rm -rf lib && babel src --out-dir lib --watch",
     "push": "npm run build && zapier push",
-    "pretest": "npm run lint && npm run build",
+    "pretest": "npm run lint && npm run build && npm run validate -- --without-style",
     "watch:test": "mocha --require babel-register --watch src/test/index.js",
     "validate": "zapier validate",
     "test": "mocha --recursive lib/test/index.js --timeout 15000"

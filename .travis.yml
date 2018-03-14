@@ -1,5 +1,7 @@
 language: node_js
 node_js:
   - 6.10.3
-before_script: 'npm install -g zapier-platform-cli'
-script: 'npm test && travis_wait 20 zapier validate'
+cache:
+  bundler: true
+  directories:
+  - node_modules
