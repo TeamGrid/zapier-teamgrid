@@ -120,6 +120,20 @@ nock('https://api.teamgridapp.com')
 
 nock('https://api.teamgridapp.com')
   .persist()
+  .get('/users')
+  .reply(200, {
+    statusCode: 200,
+    status: 'Ok',
+    info: 'Users',
+    data: [{
+      userId: 'asdf',
+      name: 'Test user asdf',
+      emails: ['test@example.com'],
+    }],
+  });
+
+nock('https://api.teamgridapp.com')
+  .persist()
   .get('/projects?limit=1000&page=1')
   .reply(200, {
     statusCode: 200,

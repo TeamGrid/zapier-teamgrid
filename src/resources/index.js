@@ -3,6 +3,7 @@ import Project from './Project';
 import Task from './Task';
 import Timeentry from './Timeentry';
 import List from './List';
+import User from './User';
 
 export default {
   Contact,
@@ -10,4 +11,5 @@ export default {
   Task,
   Timeentry,
   List,
+  User,
 };

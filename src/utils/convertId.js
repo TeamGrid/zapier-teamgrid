@@ -1,7 +1,8 @@
 const convert = (result) => {
   const res = { ...result };
-  res.id = res._id; // eslint-disable-line no-underscore-dangle
-  delete res._id; // eslint-disable-line no-underscore-dangle
+  const idField = res._id ? '_id' : 'userId'; // eslint-disable-line no-underscore-dangle
+  res.id = res[idField];
+  delete res[idField];
   return res;
 };
 

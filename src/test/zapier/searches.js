@@ -33,6 +33,12 @@ describe('Searches', () => {
       check: results => results.length > 0,
     }],
   }, {
+    name: 'SearchUser',
+    search: [{
+      fields: { search: 'asdf' },
+      check: results => results.length > 0,
+    }],
+  }, {
     name: 'SearchProject',
     search: [{
       fields: { search: 'asdf' },
