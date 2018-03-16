@@ -74,6 +74,16 @@ describe('Resources', () => {
       check: ({ id, companyTitle }) => id === 'asdf' && companyTitle === 'TeamGrid',
     },
   }, {
+    name: 'User',
+    get: {
+      id: 'asdf',
+      check: result => result.id === 'asdf',
+    },
+    search: [{
+      fields: { id: 'asdf' },
+      check: results => results.length > 0,
+    }],
+  }, {
     name: 'Project',
     get: {
       id: 'asdf',
