@@ -52,8 +52,8 @@ export const inputFields = [
   { key: 'lastname', label: 'Lastname', type: 'string' },
   { key: 'birthday', label: 'Birthday', type: 'datetime' },
   {
-    key: 'accountingtType',
-    label: 'Accountingt Type',
+    key: 'accountingType',
+    label: 'Accounting Type',
     type: 'integer',
     default: '100',
     choices: {
@@ -145,7 +145,7 @@ export default {
           ...b.inputData,
           billing: {
             accounting: {
-              type: b.inputData.accountingtType || 3,
+              type: b.inputData.accountingType || 3,
               hourlyRate: b.inputData.accountingHourlyRate || 0,
             },
             budget: {

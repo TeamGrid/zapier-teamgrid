@@ -32,7 +32,7 @@ export const inputFields = [
   { key: 'completed', label: 'Completed', type: 'boolean' },
   { key: 'archived', label: 'Archived', type: 'boolean' },
   {
-    key: 'accountingtType',
+    key: 'accountingType',
     label: 'Accountingt Type',
     type: 'integer',
     default: '100',
@@ -123,7 +123,7 @@ export default {
           ...b.inputData,
           billing: {
             accounting: {
-              type: b.inputData.accountingtType || 3,
+              type: b.inputData.accountingType || 3,
               hourlyRate: b.inputData.accountingHourlyRate || 0,
             },
             budget: {
