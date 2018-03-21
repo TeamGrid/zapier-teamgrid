@@ -37,7 +37,7 @@ export const inputFields = [
     type: 'integer',
     default: '100',
     choices: {
-      100: 'None',
+      3: 'None',
       2: 'By hourly rate',
       4: 'Use settings of assigned contact',
     },

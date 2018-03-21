@@ -57,7 +57,7 @@ export const inputFields = [
     type: 'integer',
     default: '100',
     choices: {
-      100: 'None',
+      3: 'None',
       2: 'By hourly rate',
     },
   },
